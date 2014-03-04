@@ -1,4 +1,4 @@
-package com.plausiblelabs.metrics.reporting;
+package com.bericotech.metrics.reporting;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -83,20 +83,20 @@ public class CloudWatchReporterTest {
         }
         enabler.build().run();
         assertEquals(9, client.putData.size());
-        assertEquals(Sets.newHashSet("com.plausiblelabs.metrics.reporting.CloudWatchReporterTest.TestTimer.median",
-                                     "com.plausiblelabs.metrics.reporting.CloudWatchReporterTest.TestTimer_percentile_0.999",
-                                     "com.plausiblelabs.metrics.reporting.CloudWatchReporterTest.TestTimer_percentile_0.9",
-                                     "com.plausiblelabs.metrics.reporting.CloudWatchReporterTest.TestTimer.mean",
-                                     "com.plausiblelabs.metrics.reporting.CloudWatchReporterTest.TestTimer.5MinuteRate",
-                                     "com.plausiblelabs.metrics.reporting.CloudWatchReporterTest.TestTimer.min",
-                                     "com.plausiblelabs.metrics.reporting.CloudWatchReporterTest.TestTimer.max",
-                                     "com.plausiblelabs.metrics.reporting.CloudWatchReporterTest.TestTimer.stddev",
-                                     "com.plausiblelabs.metrics.reporting.CloudWatchReporterTest.TestTimer_percentile_0.1"),
+        assertEquals(Sets.newHashSet("com.bericotech.metrics.reporting.CloudWatchReporterTest.TestTimer.median",
+                                     "com.bericotech.metrics.reporting.CloudWatchReporterTest.TestTimer_percentile_0.999",
+                                     "com.bericotech.metrics.reporting.CloudWatchReporterTest.TestTimer_percentile_0.9",
+                                     "com.bericotech.metrics.reporting.CloudWatchReporterTest.TestTimer.mean",
+                                     "com.bericotech.metrics.reporting.CloudWatchReporterTest.TestTimer.5MinuteRate",
+                                     "com.bericotech.metrics.reporting.CloudWatchReporterTest.TestTimer.min",
+                                     "com.bericotech.metrics.reporting.CloudWatchReporterTest.TestTimer.max",
+                                     "com.bericotech.metrics.reporting.CloudWatchReporterTest.TestTimer.stddev",
+                                     "com.bericotech.metrics.reporting.CloudWatchReporterTest.TestTimer_percentile_0.1"),
                      client.latestPutByName.keySet());
-        MetricDatum min = client.latestPutByName.get("com.plausiblelabs.metrics.reporting.CloudWatchReporterTest.TestTimer.min");
+        MetricDatum min = client.latestPutByName.get("com.bericotech.metrics.reporting.CloudWatchReporterTest.TestTimer.min");
         assertEquals("The recorded minutes were converted to seconds for CloudWatch", StandardUnit.Seconds.toString(), min.getUnit());
         assertEquals(0.0, min.getValue());
-        MetricDatum percentile999 = client.latestPutByName.get("com.plausiblelabs.metrics.reporting.CloudWatchReporterTest.TestTimer_percentile_0.999");
+        MetricDatum percentile999 = client.latestPutByName.get("com.bericotech.metrics.reporting.CloudWatchReporterTest.TestTimer_percentile_0.999");
         assertEquals("The recorded minutes were converted to seconds for CloudWatch", 5940.0, percentile999.getValue());
     }
 

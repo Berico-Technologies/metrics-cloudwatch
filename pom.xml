@@ -8,14 +8,14 @@
       <version>7</version>
     </parent>
 
-    <groupId>com.plausiblelabs.metrics</groupId>
+    <groupId>com.bericotech.metrics</groupId>
     <artifactId>metrics-cloudwatch</artifactId>
     <version>2.1.2.3-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Metrics for CloudWatch</name>
     <description>Sends Metrics data to Amazon's CloudWatch</description>
-    <url>https://github.com/plausiblelabs/metrics-cloudwatch</url>
+    <url>https://github.com/Berico-Technologies/metrics-cloudwatch</url>
 
     <licenses>
       <license>
@@ -26,16 +26,30 @@
     </licenses>
 
     <scm>
-      <connection>scm:git:git://github.com/plausiblelabs/metrics-cloudwatch.git</connection>
-      <developerConnection>scm:git:git@github.com:plausiblelabs/metrics-cloudwatch.git</developerConnection>
-      <url>https://github.com/plausiblelabs/metrics-cloudwatch/</url>
+      <connection>scm:git:git://github.com/Berico-Technologies/metrics-cloudwatch.git</connection>
+      <developerConnection>scm:git:git@github.com:Berico-Technologies/metrics-cloudwatch.git</developerConnection>
+      <url>https://github.com/Berico-Technologies/metrics-cloudwatch/</url>
     </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus.bericotechnologies.com</id>
+            <url>http://nexus.bericotechnologies.com/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus.bericotechnologies.com</id>
+            <url>http://nexus.bericotechnologies.com/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <developers>
       <developer>
         <name>Charlie Groves</name>
         <email>charlie.groves@gmail.com</email>
         <timezone>-8</timezone>
+        <roles>
+            <role>Original Author from Plausible Labs</role>
+        </roles>
       </developer>
     </developers>
 

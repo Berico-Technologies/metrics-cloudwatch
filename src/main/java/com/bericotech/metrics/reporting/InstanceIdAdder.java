@@ -2,7 +2,7 @@
  * Copyright Iconology, Inc. 2012. All rights reserved.
  */
 
-package com.plausiblelabs.metrics.reporting;
+package com.bericotech.metrics.reporting;
 
 import java.io.BufferedReader;
 import java.io.InputStream;

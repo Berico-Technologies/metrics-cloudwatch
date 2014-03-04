@@ -1,4 +1,4 @@
-package com.plausiblelabs.metrics.reporting;
+package com.bericotech.metrics.reporting;
 
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.services.cloudwatch.AmazonCloudWatchClient;
