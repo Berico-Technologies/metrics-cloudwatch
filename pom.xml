@@ -4,7 +4,7 @@
 
     <groupId>com.bericotech.metrics</groupId>
     <artifactId>metrics-cloudwatch</artifactId>
-    <version>2.1.2.3-SNAPSHOT</version>
+    <version>2.2.0</version>
     <packaging>jar</packaging>
 
     <name>Metrics for CloudWatch</name>
@@ -23,7 +23,8 @@
       <connection>scm:git:git://github.com/Berico-Technologies/metrics-cloudwatch.git</connection>
       <developerConnection>scm:git:git@github.com:Berico-Technologies/metrics-cloudwatch.git</developerConnection>
       <url>https://github.com/Berico-Technologies/metrics-cloudwatch/</url>
-    </scm>
+      <tag>v2.2.0</tag>
+  </scm>
 
     <build>
         <plugins>
